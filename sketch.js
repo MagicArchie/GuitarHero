@@ -398,7 +398,7 @@ function exit() {
   Quit.setVolume(0.5);
   Quit.play();
   setTimeout(function () {
-    window.location.href = "https://example.com";
+    window.location.href = "https://magicarchie.github.io/Stage_1F/";
   }, 1600);
 }
 
@@ -458,7 +458,7 @@ function exitGame() {
   Exit.setVolume(1);
   Exit.play();
   setTimeout(function () {
-    window.location.href = "https://example.com";
+    window.location.href = "https://magicarchie.github.io/Stage_1F/";
   }, 1700);
 }
 
