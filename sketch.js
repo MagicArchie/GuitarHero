@@ -117,6 +117,7 @@ let Spawns = [
 let WW = false;
 let LL = false;
 let RR = false; 
+let miss = false;
 
 let lost = false;
 let MS = false;
@@ -374,7 +375,7 @@ if (Stage == 1 || Stage == 2) {
 
 
 function menu1() {
-  MenuOpen.setVolume(0.1);
+  MenuOpen.setVolume(0.7);
   MenuOpen.play();
   
   MenuBar1Img.hide();
@@ -384,7 +385,7 @@ function menu1() {
 }
 
 function menu2() {
-  MenuClose.setVolume(0.1);
+  MenuClose.setVolume(0.7);
   MenuClose.play();
   
   MenuBar1Img.show();
@@ -394,7 +395,7 @@ function menu2() {
 }
 
 function exit() {
-  Quit.setVolume(0.1);
+  Quit.setVolume(0.5);
   Quit.play();
   setTimeout(function () {
     window.location.href = "https://example.com";
@@ -405,7 +406,7 @@ function togglePause() {
   if (!isPaused) {
     music.setVolume(0.0);
     //pausedTime23 = music.currentTime();
-    Pause1.setVolume(0.1);
+    Pause1.setVolume(0.5);
     Pause1.play();
     
     isPaused = true;
@@ -416,11 +417,11 @@ function togglePause() {
       music.setVolume(1);
       //music.jump(pausedTime - 1200);
     }, 4400);
-    Pause2.setVolume(0.1);
+    Pause2.setVolume(0.5);
     Pause2.play();
     
     setTimeout(function () {
-      countdown453.setVolume(0.1);
+      countdown453.setVolume(0.5);
       countdown453.play();
     }, 800);
     
@@ -454,7 +455,7 @@ function UpdateExit() {
 }
 
 function exitGame() {
-  Exit.setVolume(0.5);
+  Exit.setVolume(1);
   Exit.play();
   setTimeout(function () {
     window.location.href = "https://example.com";
@@ -585,25 +586,25 @@ function draw() {
     localStorage.setItem("Progress", "False");
   }
   
-  if ((Math.floor(elapsedTime)) >= 125) {
+  if ((Math.floor(elapsedTime)) >= 130) {
     UpdateExit();
   }
   
-  if ((Math.floor(elapsedTime)) >= 125) {
+  if ((Math.floor(elapsedTime)) >= 130) {
     statsImageVisible = true;
   }
   
-  if ((Math.floor(elapsedTime)) >= 125 && statsImageVisible) { 
+  if ((Math.floor(elapsedTime)) >= 130 && statsImageVisible) { 
     if (StarsV >= 3) {
       if (WW == false) {
-        Win.setVolume(0.1);
+        Win.setVolume(0.3);
         Win.play();
         WW = true;
       }
       image(BackgroundB, 0, 0, canvasWidth, canvasHeight);
     } else {
       if (LL == false) {
-        Lose.setVolume(0.4);
+        Lose.setVolume(0.8);
         Lose.play();
         LL = true;
       }
@@ -613,31 +614,31 @@ function draw() {
     image(BackgroundN, 0, 0, canvasWidth, canvasHeight);
   }
   
-  if ((Math.floor(elapsedTime)) >= 121) { 
+  if ((Math.floor(elapsedTime)) >= 126) { 
     OF = true;
   } else {
     image(highwayF, 0, 0);
   }
   
-  if ((Math.floor(elapsedTime)) >= 121 && (Math.floor(elapsedTime)) <= 122) { 
+  if ((Math.floor(elapsedTime)) >= 126 && (Math.floor(elapsedTime)) <= 127) { 
     if (FRM1 == false) {
-      Frame1_2.setVolume(0.5);
+      Frame1_2.setVolume(0.4);
       Frame1_2.play();
       FRM1 = true;
     }
     
     image(Frame3, 0, 0);
-  } else if ((Math.floor(elapsedTime)) >= 122 && (Math.floor(elapsedTime)) <= 123) {
+  } else if ((Math.floor(elapsedTime)) >= 127 && (Math.floor(elapsedTime)) <= 128) {
     if (FRM2 == false) {
-      Frame2_3.setVolume(1.1);
+      Frame2_3.setVolume(2);
       Frame2_3.play();
       FRM2 = true;
     }
     
     image(Frame2, 0, 0); 
-  } else if ((Math.floor(elapsedTime)) >= 123 && (Math.floor(elapsedTime)) <= 124) {
+  } else if ((Math.floor(elapsedTime)) >= 128 && (Math.floor(elapsedTime)) <= 129) {
     if (FRM3 == false) {
-      Frame3_4.setVolume(1.1);
+      Frame3_4.setVolume(2);
       Frame3_4.play();
       FRM3 = true;
     }
@@ -695,7 +696,7 @@ function draw() {
      }      
   }
   
-    if ((Math.floor(elapsedTime)) >= 121) {
+    if ((Math.floor(elapsedTime)) >= 126) {
       fill(60, 160); 
     } else {
       fill(40, 230); 
@@ -737,7 +738,7 @@ function draw() {
           score = score + 10 * multiplayer;
           colorUpdate1 = 1;
         } else {
-          Press2N.setVolume(0.01);
+          Press2N.setVolume(0.05);
           Press2N.play();
           GoodNotes++;
           NewInput = true;
@@ -745,7 +746,7 @@ function draw() {
           colorUpdate1 = 2;
         }
       } else {
-        Press7WW.setVolume(0.1);
+        Press7WW.setVolume(1);
         Press7WW.play();
         LostNotes++;
         NewInput = false;
@@ -798,7 +799,7 @@ function draw() {
           score = score + 10 * multiplayer;
           colorUpdate2 = 1;
         } else {
-          Press2N.setVolume(0.01);
+          Press2N.setVolume(0.05);
           Press2N.play();
           GoodNotes++;
           NewInput = true;
@@ -806,7 +807,7 @@ function draw() {
           colorUpdate2 = 2;
         }
       } else {
-        Press7WW.setVolume(0.1);
+        Press7WW.setVolume(1);
         Press7WW.play();
         LostNotes++;
         NewInput = false;
@@ -859,7 +860,7 @@ function draw() {
           score = score + 10 * multiplayer;
           colorUpdate3 = 1;
         } else {
-          Press2N.setVolume(0.01);
+          Press2N.setVolume(0.05);
           Press2N.play();
           GoodNotes++;
           NewInput = true;
@@ -867,7 +868,7 @@ function draw() {
           colorUpdate3 = 2;
         }
       } else {
-        Press7WW.setVolume(0.1);
+        Press7WW.setVolume(1);
         Press7WW.play();
         LostNotes++;
         NewInput = false;
@@ -920,7 +921,7 @@ function draw() {
           score = score + 10 * multiplayer;
           colorUpdate4 = 1;
         } else {
-          Press2N.setVolume(0.01);
+          Press2N.setVolume(0.05);
           Press2N.play();
           GoodNotes++;
           NewInput = true;
@@ -928,7 +929,7 @@ function draw() {
           colorUpdate4 = 2;
         }
       } else {
-        Press7WW.setVolume(0.1);
+        Press7WW.setVolume(1);
         Press7WW.play();
         LostNotes++;
         NewInput = false;
@@ -981,7 +982,7 @@ function draw() {
           score = score + 10 * multiplayer;
           colorUpdate5 = 1;
         } else {
-          Press2N.setVolume(0.01);
+          Press2N.setVolume(0.05);
           Press2N.play();
           GoodNotes++;
           NewInput = true;
@@ -989,7 +990,7 @@ function draw() {
           colorUpdate5 = 2;
         }
       } else {
-        Press7WW.setVolume(0.1);
+        Press7WW.setVolume(1);
         Press7WW.play();
         LostNotes++;
         NewInput = false;
@@ -1024,7 +1025,7 @@ function draw() {
     }
   }
   
-if ((Math.floor(elapsedTime) < 125)) {
+if ((Math.floor(elapsedTime) < 130)) {
   if (streakF) {
     if (FF == false) {
       Fire.setVolume(0.2);
@@ -1087,9 +1088,9 @@ if ((Math.floor(elapsedTime) < 125)) {
     KeyIcon = 0;
   }
     
-    if ((Math.floor(elapsedTime)) >= 120) {
+    if ((Math.floor(elapsedTime)) >= 125) {
       if (TM1 == false) {
-        Time6_7.setVolume(0.5);
+        Time6_7.setVolume(0.9);
         Time6_7.play();
         TM1 = true;
       }
@@ -1097,7 +1098,7 @@ if ((Math.floor(elapsedTime) < 125)) {
     Bar = 6;
   } else if ((Math.floor(elapsedTime)) >= 100) {
     if (TM2 == false) {
-      Time5_6.setVolume(0.5);
+      Time5_6.setVolume(0.9);
       Time5_6.play();
       TM2 = true;
     }
@@ -1105,7 +1106,7 @@ if ((Math.floor(elapsedTime) < 125)) {
     Bar = 5;
   } else if ((Math.floor(elapsedTime)) >= 80) {
     if (TM3 == false) {
-      Time4_5.setVolume(0.5);
+      Time4_5.setVolume(0.9);
       Time4_5.play();
       TM3 = true;
     }
@@ -1113,7 +1114,7 @@ if ((Math.floor(elapsedTime) < 125)) {
     Bar = 4;
   } else if ((Math.floor(elapsedTime)) >= 60) {
     if (TM4 == false) {
-      Time3_4.setVolume(0.5);
+      Time3_4.setVolume(0.9);
       Time3_4.play();
       TM4 = true;
     }
@@ -1121,7 +1122,7 @@ if ((Math.floor(elapsedTime) < 125)) {
     Bar = 3;
   } else if ((Math.floor(elapsedTime)) >= 40) {
     if (TM5 == false) {
-      Time2_3.setVolume(0.5);
+      Time2_3.setVolume(0.9);
       Time2_3.play();
       TM5 = true;
     }
@@ -1129,7 +1130,7 @@ if ((Math.floor(elapsedTime) < 125)) {
     Bar = 2;
   } else if ((Math.floor(elapsedTime)) >= 20) {
     if (TM6 == false) {
-      Time1_2.setVolume(0.5);
+      Time1_2.setVolume(0.9);
       Time1_2.play();
       TM6 = true;
     }
@@ -1141,7 +1142,7 @@ if ((Math.floor(elapsedTime) < 125)) {
     }
 }
   
-if ((Math.floor(elapsedTime)) >= 124) {
+if ((Math.floor(elapsedTime)) >= 129) {
   if (FRM4 == false) {
     setTimeout(function() {
       //Frame4_5.setVolume(0.2);
@@ -1151,7 +1152,7 @@ if ((Math.floor(elapsedTime)) >= 124) {
   }
 }
 
-  if ((Math.floor(elapsedTime)) >= 125 && statsImageVisible) { 
+  if ((Math.floor(elapsedTime)) >= 129 && statsImageVisible) { 
     
     MenuBar1Img.hide();
     MenuBar2Img.hide();
@@ -1236,7 +1237,7 @@ if ((Math.floor(elapsedTime)) >= 124) {
         mouseIsPressed
       ) {
         if (RR == false) {
-          Rewind.setVolume(0.1);
+          Rewind.setVolume(0.6);
           Rewind.play();
           RR = true;
         }
@@ -1326,6 +1327,11 @@ if ((Math.floor(elapsedTime)) >= 124) {
     // Check if the moving image has reached a certain y-coordinate
     let disappearY = 650; // Adjust the y-coordinate where the notes should disappear
     if (currentMovingNote1.y > disappearY) {
+      if (miss == false) {
+        //Press7WW.setVolume(1);
+        //Press7WW.play();
+        miss = true;
+      }
       currentMovingNote1.visible = false;
     }
 
@@ -1343,14 +1349,14 @@ if ((Math.floor(elapsedTime)) >= 124) {
 }
 
 function open() {
-  ChestOpen.setVolume(0.6);
+  ChestOpen.setVolume(0.5);
   ChestOpen.play();
   ChestImg.hide();
   KeyRing.show();
 }
 
 function claim() {
-  Equip.setVolume(0.8);
+  Equip.setVolume(1);
   Equip.play();
   KeyRing.hide();
   Won = true;
