@@ -133,7 +133,20 @@ let sizeNoteY = 25;
 
 // Line counters
 let lineCounters = [0, 0, 0, 0, 0];
-let Stage = parseInt(localStorage.getItem('Stage'), 10);
+
+// Retrieve the value from localStorage
+let storedStage = localStorage.getItem('Stage');
+
+// Check if the value is not null or undefined
+if (storedStage !== null && storedStage !== undefined) {
+    // Parse the value as an integer
+    let Stage = parseInt(storedStage, 10);
+
+    // Now you can use the Stage variable
+    console.log("Received Stage:", Stage);
+} else {
+    console.log("Stage not found in localStorage");
+}
 
 let music;
 let MenuOpen;
@@ -153,13 +166,13 @@ let Equip;
 let Rewind;
 let countdown453;
 
-let StageF1 = "false";
-let StageF2 = "false";
-let StageF3 = "false";
-let StageF4 = "false";
-let StageF5 = "false";
-let StageF6 = "false";
-let StageF7 = "false";
+let StageF1 = 521;
+let StageF2 = 521;
+let StageF3 = 521;
+let StageF4 = 521;
+let StageF5 = 521;
+let StageF6 = 521;
+let StageF7 = 521;
 
 function preload() {
   music = loadSound('Audio/Music/Music13.mp3');
@@ -342,7 +355,7 @@ function setup() {
   KeyRing.hide();
 }
 
-if (Stage == "STG1" || Stage == "STG2") {
+if (Stage == 11 || Stage == "STG2") {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
@@ -499,19 +512,19 @@ function exitGame() {
   Exit.setVolume(1);
   Exit.play();
   setTimeout(function () {
-    if (Stage == "STG1") {
+    if (Stage == 11) {
       window.location.href = "https://magicarchie.github.io/Stage_1F/";
-    } else if (Stage == "STG2") {
+    } else if (Stage == 22) {
       window.location.href = "https://magicarchie.github.io/Stage_2F/";
-    } else if (Stage == "STG3") {
+    } else if (Stage == 33) {
       window.location.href = "https://magicarchie.github.io/Stage_3F/";
-    } else if (Stage == "STG4") {
+    } else if (Stage == 44) {
       window.location.href = "https://magicarchie.github.io/Stage_4F/";
-    } else if (Stage == "STG5") {
+    } else if (Stage == 55) {
       window.location.href = "https://magicarchie.github.io/Stage_5F/";
-    } else if (Stage == "STG6") {
+    } else if (Stage == 66) {
       window.location.href = "https://magicarchie.github.io/Stage_6F/";
-    } else if (Stage == "STG7") {
+    } else if (Stage == 77) {
       window.location.href = "https://magicarchie.github.io/Stage_7F/";
     }
   }, 1700);
@@ -628,7 +641,7 @@ function draw() {
   
   if (Won == true) {
     valueToSend = 2;
-    localStorage.setItem('data', valueToSend);
+    localStorage.setItem('data', valueToSend); //-------------------------------------00
   } else {
     valueToSend = 1;
     localStorage.setItem('data', valueToSend);
@@ -1223,26 +1236,26 @@ if ((Math.floor(elapsedTime)) >= 129) {
     
     if (StarsV >= 3) {
 
-      if (Stage == "STG1") {
-        StageF1 = "true";
+      if (Stage == 11) {
+        StageF1 = 125;
         localStorage.setItem('Complete1', StageF1);
-      } else if (Stage == "STG2") {
-        StageF2 = "true";
+      } else if (Stage == 22) {
+        StageF2 = 125;
         localStorage.setItem('Complete2', StageF2);
-      } else if (Stage == "STG3") {
-        StageF3 = "true";
+      } else if (Stage == 33) {
+        StageF3 = 125;
         localStorage.setItem('Complete3', StageF3);
-      } else if (Stage == "STG4") {
-        StageF4 = "true";
+      } else if (Stage == 44) {
+        StageF4 = 125;
         localStorage.setItem('Complete4', StageF4);
-      } else if (Stage == "STG5") {
-        StageF5 = "true";
+      } else if (Stage == 55) {
+        StageF5 = 125;
         localStorage.setItem('Complete5', StageF5);
-      } else if (Stage == "STG6") {
-        StageF6 = "true";
+      } else if (Stage == 66) {
+        StageF6 = 125;
         localStorage.setItem('Complete6', StageF6);
-      } else if (Stage == "STG7") {
-        StageF7 = "true";
+      } else if (Stage == 77) {
+        StageF7 = 125;
         localStorage.setItem('Complete7', StageF7);
       }
       
