@@ -499,7 +499,21 @@ function exitGame() {
   Exit.setVolume(1);
   Exit.play();
   setTimeout(function () {
-    window.location.href = "https://magicarchie.github.io/Stage_1F/";
+    if (Stage == "STG1") {
+      window.location.href = "https://magicarchie.github.io/Stage_1F/";
+    } else if (Stage == "STG2") {
+      window.location.href = "https://magicarchie.github.io/Stage_2F/";
+    } else if (Stage == "STG3") {
+      window.location.href = "https://magicarchie.github.io/Stage_3F/";
+    } else if (Stage == "STG4") {
+      window.location.href = "https://magicarchie.github.io/Stage_4F/";
+    } else if (Stage == "STG5") {
+      window.location.href = "https://magicarchie.github.io/Stage_5F/";
+    } else if (Stage == "STG6") {
+      window.location.href = "https://magicarchie.github.io/Stage_6F/";
+    } else if (Stage == "STG7") {
+      window.location.href = "https://magicarchie.github.io/Stage_7F/";
+    }
   }, 1700);
 }
 
