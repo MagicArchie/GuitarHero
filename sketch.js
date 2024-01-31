@@ -1210,25 +1210,25 @@ if ((Math.floor(elapsedTime)) >= 129) {
     if (StarsV >= 3) {
 
       if (Stage == "STG1") {
-        StageF1 == "true";
+        StageF1 = "true";
         localStorage.setItem('Complete1', StageF1);
       } else if (Stage == "STG2") {
-        StageF2 == "true";
+        StageF2 = "true";
         localStorage.setItem('Complete2', StageF2);
       } else if (Stage == "STG3") {
-        StageF3 == "true";
+        StageF3 = "true";
         localStorage.setItem('Complete3', StageF3);
       } else if (Stage == "STG4") {
-        StageF4 == "true";
+        StageF4 = "true";
         localStorage.setItem('Complete4', StageF4);
       } else if (Stage == "STG5") {
-        StageF5 == "true";
+        StageF5 = "true";
         localStorage.setItem('Complete5', StageF5);
       } else if (Stage == "STG6") {
-        StageF6 == "true";
+        StageF6 = "true";
         localStorage.setItem('Complete6', StageF6);
       } else if (Stage == "STG7") {
-        StageF7 == "true";
+        StageF7 = "true";
         localStorage.setItem('Complete7', StageF7);
       }
       
