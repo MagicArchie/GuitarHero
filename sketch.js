@@ -135,14 +135,9 @@ let sizeNoteY = 25;
 let lineCounters = [0, 0, 0, 0, 0];
 
 // Retrieve the value from localStorage
-let storedStage = localStorage.getItem('Stage');
+let Stage = localStorage.getItem('Stage');
 
-// Check if the value is not null or undefined
-if (storedStage !== null && storedStage !== undefined) {
-    // Parse the value as an integer
-    let Stage = parseInt(storedStage, 10);
-
-    // Now you can use the Stage variable
+if (Stage !== null && Stage !== undefined) {
     console.log("Received Stage:", Stage);
 } else {
     console.log("Stage not found in localStorage");
