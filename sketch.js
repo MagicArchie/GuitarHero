@@ -133,7 +133,7 @@ let sizeNoteY = 25;
 
 // Line counters
 let lineCounters = [0, 0, 0, 0, 0];
-let Stage = parseInt(localStorage.getItem('data'), 10);
+let Stage = parseInt(localStorage.getItem('Stage'), 10);
 
 let music;
 let MenuOpen;
