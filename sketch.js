@@ -447,7 +447,21 @@ function exit() {
   Quit.setVolume(0.5);
   Quit.play();
   setTimeout(function () {
-    window.location.href = "https://magicarchie.github.io/Stage_1F/";
+    if (Stage == 11) {
+      window.location.href = "https://magicarchie.github.io/Stage_1F/";
+    } else if (Stage == 22) {
+      window.location.href = "https://magicarchie.github.io/Stage_2F/";
+    } else if (Stage == 33) {
+      window.location.href = "https://magicarchie.github.io/Stage_3F/";
+    } else if (Stage == 44) {
+      window.location.href = "https://magicarchie.github.io/Stage_4F/";
+    } else if (Stage == 55) {
+      window.location.href = "https://magicarchie.github.io/Stage_5F/";
+    } else if (Stage == 66) {
+      window.location.href = "https://magicarchie.github.io/Stage_6F/";
+    } else if (Stage == 77) {
+      window.location.href = "https://magicarchie.github.io/Stage_7F/";
+    }
   }, 1600);
 }
 
