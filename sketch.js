@@ -355,7 +355,7 @@ function setup() {
   KeyRing.hide();
 }
 
-if (Stage == 11 || Stage == "STG2") {
+if (Stage == 11 || Stage == 22) {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
@@ -367,7 +367,7 @@ if (Stage == 11 || Stage == "STG2") {
   MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
   MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
   
-} else if (Stage == "STG3" || Stage == "STG4") {
+} else if (Stage == 33 || Stage == 44) {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
@@ -379,7 +379,7 @@ if (Stage == 11 || Stage == "STG2") {
   MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
   MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
   
-} else if (Stage == "STG5" || Stage == "STG6") {
+} else if (Stage == 55 || Stage == 66) {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
@@ -391,7 +391,7 @@ if (Stage == 11 || Stage == "STG2") {
   MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
   MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
   
-} else if (Stage == "STG7") {
+} else if (Stage == 77) {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
@@ -403,7 +403,7 @@ if (Stage == 11 || Stage == "STG2") {
   MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
   MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
   
-} else if (Stage == "STG0") {
+} else if (Stage == 88) {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
