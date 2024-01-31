@@ -401,6 +401,17 @@ if (Stage == "STG1" || Stage == "STG2") {
   MideMap[7] = { note: "fk", TimeS: 25.5, TimeE: 26.5 };
   MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
   MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
+} else {
+  MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
+  MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
+  MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
+  MideMap[3] = { note: "fk", TimeS: 15.5, TimeE: 16.5 };
+  MideMap[4] = { note: "j", TimeS: 18.5, TimeE: 19.5 };
+  MideMap[5] = { note: "dl", TimeS: 21.5, TimeE: 22.5 };
+  MideMap[6] = { note: "dl", TimeS: 23.5, TimeE: 24.5 };
+  MideMap[7] = { note: "fk", TimeS: 25.5, TimeE: 26.5 };
+  MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
+  MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
 }
 
 
