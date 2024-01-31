@@ -153,6 +153,13 @@ let Equip;
 let Rewind;
 let countdown453;
 
+let StageF1 = "false";
+let StageF2 = "false";
+let StageF3 = "false";
+let StageF4 = "false";
+let StageF5 = "false";
+let StageF6 = "false";
+let StageF7 = "false";
 
 function preload() {
   music = loadSound('Audio/Music/Music13.mp3');
@@ -335,7 +342,7 @@ function setup() {
   KeyRing.hide();
 }
 
-if (Stage == 1 || Stage == 2) {
+if (Stage == "STG1" || Stage == "STG2") {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
@@ -347,30 +354,53 @@ if (Stage == 1 || Stage == 2) {
   MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
   MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
   
-} else if (Stage == 3 || Stage == 4) {
+} else if (Stage == "STG3" || Stage == "STG4") {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
   MideMap[3] = { note: "fk", TimeS: 15.5, TimeE: 16.5 };
   MideMap[4] = { note: "j", TimeS: 18.5, TimeE: 19.5 };
-} else if (Stage == 5 || Stage == 6) {
+  MideMap[5] = { note: "dl", TimeS: 21.5, TimeE: 22.5 };
+  MideMap[6] = { note: "dl", TimeS: 23.5, TimeE: 24.5 };
+  MideMap[7] = { note: "fk", TimeS: 25.5, TimeE: 26.5 };
+  MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
+  MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
+  
+} else if (Stage == "STG5" || Stage == "STG6") {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
   MideMap[3] = { note: "fk", TimeS: 15.5, TimeE: 16.5 };
   MideMap[4] = { note: "j", TimeS: 18.5, TimeE: 19.5 };
-} else if (Stage == 7) {
+  MideMap[5] = { note: "dl", TimeS: 21.5, TimeE: 22.5 };
+  MideMap[6] = { note: "dl", TimeS: 23.5, TimeE: 24.5 };
+  MideMap[7] = { note: "fk", TimeS: 25.5, TimeE: 26.5 };
+  MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
+  MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
+  
+} else if (Stage == "STG7") {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
   MideMap[3] = { note: "fk", TimeS: 15.5, TimeE: 16.5 };
   MideMap[4] = { note: "j", TimeS: 18.5, TimeE: 19.5 };
-} else if (Stage == 8) {
+  MideMap[5] = { note: "dl", TimeS: 21.5, TimeE: 22.5 };
+  MideMap[6] = { note: "dl", TimeS: 23.5, TimeE: 24.5 };
+  MideMap[7] = { note: "fk", TimeS: 25.5, TimeE: 26.5 };
+  MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
+  MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
+  
+} else if (Stage == "STG0") {
   MideMap[0] = { note: "j", TimeS: 8.5, TimeE: 9.5 };
   MideMap[1] = { note: "fk", TimeS: 10.5, TimeE: 11.5 };
   MideMap[2] = { note: "dl", TimeS: 12.5, TimeE: 13.5 };
   MideMap[3] = { note: "fk", TimeS: 15.5, TimeE: 16.5 };
   MideMap[4] = { note: "j", TimeS: 18.5, TimeE: 19.5 };
+  MideMap[5] = { note: "dl", TimeS: 21.5, TimeE: 22.5 };
+  MideMap[6] = { note: "dl", TimeS: 23.5, TimeE: 24.5 };
+  MideMap[7] = { note: "fk", TimeS: 25.5, TimeE: 26.5 };
+  MideMap[8] = { note: "fk", TimeS: 26.5, TimeE: 27.5 };
+  MideMap[9] = { note: "fk", TimeS: 28.5, TimeE: 29.5 };
 }
 
 
@@ -1167,6 +1197,29 @@ if ((Math.floor(elapsedTime)) >= 129) {
     rect(0, 0, canvasWidth, canvasHeight);
     
     if (StarsV >= 3) {
+
+      if (Stage == "STG1") {
+        StageF1 == "true";
+        localStorage.setItem('Complete1', StageF1);
+      } else if (Stage == "STG2") {
+        StageF2 == "true";
+        localStorage.setItem('Complete2', StageF2);
+      } else if (Stage == "STG3") {
+        StageF3 == "true";
+        localStorage.setItem('Complete3', StageF3);
+      } else if (Stage == "STG4") {
+        StageF4 == "true";
+        localStorage.setItem('Complete4', StageF4);
+      } else if (Stage == "STG5") {
+        StageF5 == "true";
+        localStorage.setItem('Complete5', StageF5);
+      } else if (Stage == "STG6") {
+        StageF6 == "true";
+        localStorage.setItem('Complete6', StageF6);
+      } else if (Stage == "STG7") {
+        StageF7 == "true";
+        localStorage.setItem('Complete7', StageF7);
+      }
       
       // Display Victory Text
       victoryTextVisible = true;
