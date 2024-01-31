@@ -648,21 +648,6 @@ function draw() {
     MS = true;
   }
   
-  if (Won == true) {
-    valueToSend = 2;
-    localStorage.setItem('data', valueToSend); //-------------------------------------00
-  } else {
-    valueToSend = 1;
-    localStorage.setItem('data', valueToSend);
-  }
- 
-  
-  if (score >= 150) {
-    localStorage.setItem("Progress", "True");
-  } else {
-    localStorage.setItem("Progress", "False");
-  }
-  
   if ((Math.floor(elapsedTime)) >= 130) {
     UpdateExit();
   }
@@ -702,6 +687,9 @@ function draw() {
       Frame1_2.setVolume(0.4);
       Frame1_2.play();
       FRM1 = true;
+      if (BestStreak < Streak) {
+        BestStreak = Streak;
+      }
     }
     
     image(Frame3, 0, 0);
