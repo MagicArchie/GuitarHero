@@ -461,6 +461,10 @@ function exit() {
       window.location.href = "https://magicarchie.github.io/Stage_6F/";
     } else if (Stage == 77) {
       window.location.href = "https://magicarchie.github.io/Stage_7F/";
+    } else if (Stage == 88) {
+      window.location.href = "https://magicarchie.github.io/Stage_Selection_Secret/";
+    } else if (Stage == 99) {
+      window.location.href = "https://magicarchie.github.io/Stage_Selection_Finale/";
     }
   }, 1600);
 }
@@ -535,6 +539,14 @@ function exitGame() {
       window.location.href = "https://magicarchie.github.io/Stage_6F/";
     } else if (Stage == 77) {
       window.location.href = "https://magicarchie.github.io/Stage_7F/";
+    } else if (Stage == 99) {
+      window.location.href = "https://magicarchie.github.io/Stage_Selection_Finale/";
+    } else if (Stage == 88) {
+      if (victoryTextVisible) {
+        window.location.href = "https://magicarchie.github.io/Stage_Selection_Finale/";
+      } else {
+        window.location.href = "https://magicarchie.github.io/Stage_Selection_Secret/";
+      }
     }
   }, 1700);
 }
